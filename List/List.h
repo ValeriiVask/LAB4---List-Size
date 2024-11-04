@@ -41,8 +41,15 @@ public:
 
 	size_t size() const noexcept
 	{
-		//TODO Implement the size method that returns the number of items in the list.
-		std::terminate();
+			size_t count = 0;
+			Node* current = head;
+			while (current != nullptr) {
+				++count;
+				current = current->next;
+			}
+			return count;
+		}
+
 	}
 
 	void pushFront(T value)
